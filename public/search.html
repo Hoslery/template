@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>React App</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="app">
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <header class="header">
+        <div class="player-bar">
+          <div class="player-bar-progress"></div>
+          <a class="player-bar-cover name-link">
+            <img src="images/default_player.png"/>
+          </a>
+          <div class="player-bar-info"></div>
+          <div class="player-bar-controls">
+
+            <ul class="media-controls list-type-none">
+              <li>
+                <button class="player-bar-btn player-bar-btn--previous button-set">
+                    Previous
+                </button>
+              </li>
+              <li>
+                <button class="player-bar-btn player-bar-btn--play button-set">
+                    Play
+                </button>
+              </li>
+              <li>
+                <button class="player-bar-btn player-bar-btn--next button-set">
+                    Next
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="logo-center">
+          <a class="logo" href="/">Last.fm</a>
+        </div>
+        <div class="interaction">
+          <a class="search-toggle" href="/search">Search</a>
+          <div class="interaction-nav">
+            <ul class="interaction-navlist-items list-type-none">
+              <li class="nav-item">
+                <a class="nav-link name-link" href="/live">Live</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link name-link" href="/music">Music</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link name-link" href="/charts">Charts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link name-link" href="/events">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link name-link" href="/features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link name-link" href="/">More...</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="site-auth list-type-none">
+            <li class="site-auth-item">
+              <a class="nav-link name-link" href="/login">Log in</a>
+            </li>
+            <li class="site-auth-item">
+              <a class="signup name-link" href="/signup">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="content-top">
+            <div class="container content-top-pad">
+                <h1 class="content-top-header">
+                    <strong>Search results for “never gonna give you up”</strong>
+                </h1>
+                <nav class="navlist secondary-nav">
+                    <ul class="navlist-items list-type-none ">
+                        <li class="navlist-item secondary-nav-item">
+                          <a class="secondary-nav-item-link secondary-nav-item-link--active name-link"
+                          href="/">
+                          Top Results
+                          </a>
+                        </li>
+                        <li class="navlist-item secondary-nav-item">
+                          <a class="secondary-nav-item-link name-link"
+                          href="/">
+                          Artists
+                          </a>
+                        </li>
+                        <li class="navlist-item secondary-nav-item">
+                          <a class="secondary-nav-item-link name-link"
+                          href="/">
+                          Albums
+                          </a>
+                        </li>
+                        <li class="navlist-item secondary-nav-item">
+                          <a class="secondary-nav-item-link name-link"
+                          href="/">
+                          Tracks
+                          </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="two-column-page">
+            <div class="container page-content">
+                <div class="row">
+                    <div class="col-main">
+                        <div class="content-search">
+                            <input  class="search-field" type="text" placeholder="Search for music…" value="never gonna give you up" required="">
+                            <button class="search-reset button-set" type="reset"></button>
+                            <button class="search-submit button-set" type="submit"></button>
+                        </div>
+                        <section class="search-info-section">
+                            <h2 class="search-heading"><a href="/" class="name-link">
+                                Artists
+                            </a></h2>
+                            <ol class="grid-items list-type-none">
+                                
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Gonna Give You Up</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                1,765 listeners    
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Gonna Give You Up (J</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                43 listeners     
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>      
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">"Never Gonna Give You Up" scene</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                89 listeners   
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Gonna Give You Up (8 Bit Remix Cover Version) [Tribute to Rick Astley]</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                63 listeners     
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">RICK ASTLEY - never gonna give you up 2004' (white label club remix)</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                142 listeners   
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Never Gonna Give You Up</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                69 listeners    
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">"Never Gonna Give You Up" (1987 VS 2022) Side</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                16 listeners    
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Rick Astley - Never Gonna Give You Up</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                65 listeners    
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+                                
+                            </ol>
+                            <p class="more-link">
+                                <a class="more-link-link" href="/">More artists</a>
+                            </p>
+                        </section>
+                        <section class="search-info-section">
+                            <h2 class="search-heading"><a href="/" class="name-link">
+                                Albums
+                            </a></h2>
+                            <ol class="grid-items list-type-none">
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/d68bc667b45d19007c0a88185cbcd87f.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Gonna Give You Up</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                <a class="name-link" href="/">Mac Beez</a>     
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/c6f59c1e5e7240a4c0d427abd71f3dbb.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Gonna Give You Up</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                <a class="name-link" href="/">Formal Chicken</a>    
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>      
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/c6f59c1e5e7240a4c0d427abd71f3dbb.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Gonna Give You Up</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                <a class="name-link" href="/">Radioclub</a>     
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/d66f242e5a184e60ba100591a4797a4c.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Gonna Give You Up</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                <a class="name-link" href="/">Rick Astley</a>     
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/c9e969369aa10af7215ccb41e4bf9980.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Gonna Give You Up</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                <a class="name-link" href="/">The Animal In Me</a>     
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/4ad750c4341d10a3dab628698a11a2f8.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Gonna Give You Up</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                <a class="name-link" href="/">Hazlett</a>     
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/c6f59c1e5e7240a4c0d427abd71f3dbb.jpg" alt="Image for 'Never Gonna Give You Up (Lofi Remix)'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Gonna Give You Up (Lofi Remix)</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                <a class="name-link" href="/">Peng Lexer</a>     
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+    
+                                <li class="grid-item">
+                                    <div class="grid-item-cover link-block">
+    
+                                        <div class="grid-item-cover-image">
+                                            <img src="https://lastfm.freetls.fastly.net/i/u/300x300/46d60c77a9cab19b04c47d747f30542a.jpg" alt="Image for 'Never Gonna Give You Up'">
+                                        </div>
+    
+                                        <div class="grid-item-details">
+                                            <p class="grid-item-main-text">
+                                                <a class="name-link" href="/">Never Gonna Give You Up</a>
+                                            </p>
+                                            <p class="grid-item-aux-text">
+                                                <a class="name-link" href="/">Smash Mouth</a>     
+                                            </p>
+                                        </div>
+    
+                                        <a href="/" class="link-block-cover-link"></a>
+                                        
+                                    </div>       
+                                </li>
+                                
+                            </ol>
+                            <p class="more-link">
+                                <a class="more-link-link" href="/">More albums</a>
+                            </p>
+                        </section>
+                        <section class="search-info-section">
+                            <h2 class="search-heading"><a href="/" class="name-link">
+                                Tracks
+                            </a></h2>
+                            <table class="tracklist">
+                                <tbody>
+                                    <tr class="tracklist-row">
+                                        <td class="tracklist-play"> 
+                                            <a class="tracklist-play-button name-link" 
+                                            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">  
+                                            </a>
+                                        </td>
+    
+                                        <td class="tracklist-image">
+                                            <a href="/" class="cover-art name-link">
+                                                <img src="https://lastfm.freetls.fastly.net/i/u/64s/7eedf5854f216eba1908447afdb746d6.jpg" alt="Whenever You Need Somebody">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-loved">   
+                                            <a class="tracklist-love-button name-link" href="/">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-name">
+                                            <a class="name-link" href="/" title="Never Gonna Give You Up">Never Gonna Give You Up</a>
+                                        </td>
+                        
+                                        <td class="tracklist-artist">
+                                            <a class="name-link" href="/" title="Rick Astley">Rick Astley</a>
+                                        </td>
+                                
+                                        <td class="tracklist-duration">
+                                            5:46
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="tracklist-row">
+                                        <td class="tracklist-play"> 
+                                            <a class="tracklist-play-button name-link" 
+                                            href="https://www.youtube.com/watch?v=2z5UO2XHfmw" target="_blank">     
+                                            </a>
+                                        </td>
+    
+                                        <td class="tracklist-image">
+                                            <a href="/" class="cover-art name-link">
+                                                <img src="https://lastfm.freetls.fastly.net/i/u/64s/fe84144e16808e200304351b5e9410de.jpg" alt="Brothers">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-loved">   
+                                            <a class="toggle-button tracklist-love-button name-link" href="/">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-name">
+                                            <a class="name-link" href="/" title="Never Gonna Give You Up">Never Gonna Give You Up</a>
+                                        </td>
+                        
+                                        <td class="tracklist-artist">
+                                            <a class="name-link" href="/" title="The Black Keys">The Black Keys</a>
+                                        </td>
+                                
+                                        <td class="tracklist-duration">
+                                            3:39
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="tracklist-row">
+                                        <td class="tracklist-play"> 
+                                            <a class="tracklist-play-button name-link" 
+                                            href="https://www.youtube.com/watch?v=K5zP7eQltDE" target="_blank">    
+                                            </a>
+                                        </td>
+    
+                                        <td class="tracklist-image">
+                                            <a href="/" class="cover-art name-link">
+                                                <img src="https://lastfm.freetls.fastly.net/i/u/64s/2b3cd933f84f152d9a5f24409ecb9eb4.jpg" alt="The Ultimate Collection">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-loved">   
+                                            <a class="toggle-button tracklist-love-button name-link" href="/">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-name">
+                                            <a class="name-link" href="/" title="Never, Never Gonna Give You Up">Never, Never Gonna Give You Up</a>
+                                        </td>
+                        
+                                        <td class="tracklist-artist">
+                                            <a class="name-link" href="/" title="Barry White">Barry White</a>
+                                        </td>
+                                
+                                        <td class="tracklist-duration">
+                                            
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="tracklist-row">
+                                        <td class="tracklist-play"> 
+                                            <a class="tracklist-play-button name-link" 
+                                            href="https://www.youtube.com/watch?v=yw62QVLKOcs" target="_blank">    
+                                            </a>
+                                        </td>
+    
+                                        <td class="tracklist-image">
+                                            <a href="/" class="cover-art name-link">
+                                                <img src="https://lastfm.freetls.fastly.net/i/u/64s/19f9ab9a35f5486da28527d7a2158a57.jpg" alt="B-Sides and Rarities">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-loved">   
+                                            <a class="toggle-button tracklist-love-button name-link" href="/">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-name">
+                                            <a class="name-link" href="/" title="Never, Never Gonna Give You Up">Never, Never Gonna Give You Up</a>
+                                        </td>
+                        
+                                        <td class="tracklist-artist">
+                                            <a class="name-link" href="/" title="Cake">Cake</a>
+                                        </td>
+                                
+                                        <td class="tracklist-duration">
+                                            3:50
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="tracklist-row">
+                                        <td class="tracklist-play"> 
+                                            <a class="tracklist-play-button name-link" 
+                                            href="https://www.youtube.com/watch?v=KnPIifZTcBE" target="_blank">     
+                                            </a>
+                                        </td>
+    
+                                        <td class="tracklist-image">
+                                            <a href="/" class="cover-art name-link">
+                                                <img src="https://lastfm.freetls.fastly.net/i/u/64s/dacd12a5d0d84bc7a65cb112eb5e7d3b.jpg" alt="Lisa Stansfield">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-loved">   
+                                            <a class="toggle-button tracklist-love-button name-link" href="/">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-name">
+                                            <a class="name-link" href="/" title="Never, Never Gonna Give You Up">Never, Never Gonna Give You Up</a>
+                                        </td>
+                        
+                                        <td class="tracklist-artist">
+                                            <a class="name-link" href="/" title="Lisa Stansfield">Lisa Stansfield</a>
+                                        </td>
+                                
+                                        <td class="tracklist-duration">
+                                            4:28
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="tracklist-row">
+                                        <td class="tracklist-play"> 
+                                            <a class="tracklist-play-button name-link" 
+                                            href="https://www.youtube.com/watch?v=pF_J1iz_lao" target="_blank">    
+                                            </a>
+                                        </td>
+    
+                                        <td class="tracklist-image">
+                                            <a href="/" class="cover-art name-link">
+                                                <img src="https://lastfm.freetls.fastly.net/i/u/64s/c6f59c1e5e7240a4c0d427abd71f3dbb.jpg" alt="Greatest Dance Hits Of The 70's">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-loved">   
+                                            <a class="toggle-button tracklist-love-button name-link" href="/">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-name">
+                                            <a class="name-link" href="/" title="Never Gonna Give You Up">Never Gonna Give You Up</a>
+                                        </td>
+                        
+                                        <td class="tracklist-artist">
+                                            <a class="name-link" href="/" title="Barry White">Barry White</a>
+                                        </td>
+                                
+                                        <td class="tracklist-duration">
+                                            
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="tracklist-row">
+                                        <td class="tracklist-play"> 
+                                            <a class="tracklist-play-button name-link" 
+                                            href="https://www.youtube.com/watch?v=1Nc6gyaCMlA" target="_blank">     
+                                            </a>
+                                        </td>
+    
+                                        <td class="tracklist-image">
+                                            <a href="/" class="cover-art name-link">
+                                                <img src="https://lastfm.freetls.fastly.net/i/u/64s/d68bc667b45d19007c0a88185cbcd87f.jpg" alt="Never Gonna Give You Up">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-loved">   
+                                            <a class="toggle-button tracklist-love-button name-link" href="/">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-name">
+                                            <a class="name-link" href="/" title="Never Gonna Give You Up">Never Gonna Give You Up</a>
+                                        </td>
+                        
+                                        <td class="tracklist-artist">
+                                            <a class="name-link" href="/" title="Mac Beez">Mac Beez</a>
+                                        </td>
+                                
+                                        <td class="tracklist-duration">
+                                            3:32
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="tracklist-row">
+                                        <td class="tracklist-play"> 
+
+                                        </td>
+    
+                                        <td class="tracklist-image">
+                                            <a href="/" class="cover-art name-link">
+                                                <img src="https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg" alt="Never Gonna Give You Up - 7&quot; Mix">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-loved">   
+                                            <a class="toggle-button tracklist-love-button name-link" href="/">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-name">
+                                            <a class="name-link" href="/" title="Never Gonna Give You Up - 7&quot; Mix">Never Gonna Give You Up - 7" Mix</a>
+                                        </td>
+                        
+                                        <td class="tracklist-artist">
+                                            <a class="name-link" href="/" title="Rick Astley">Rick Astley</a>
+                                        </td>
+                                
+                                        <td class="tracklist-duration">
+                                            
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="tracklist-row">
+                                        <td class="tracklist-play"> 
+                                            <a class="tracklist-play-button name-link" 
+                                            href="https://www.youtube.com/watch?v=mW61VTLhNjQ" target="_blank">    
+                                            </a>
+                                        </td>
+    
+                                        <td class="tracklist-image">
+                                            <a href="/" class="cover-art name-link">
+                                                <img src="https://lastfm.freetls.fastly.net/i/u/64s/e813437ff134cce4fb7e7bb198bc0622.jpg" alt="City Poppin'">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-loved">   
+                                            <a class="toggle-button tracklist-love-button name-link" href="/">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-name">
+                                            <a class="name-link" href="/" title="Never Gonna Give You Up (Japanese Version)">Never Gonna Give You Up (Japanese Version)</a>
+                                        </td>
+                        
+                                        <td class="tracklist-artist">
+                                            <a class="name-link" href="/" title="Caitlin Myers">Caitlin Myers</a>
+                                        </td>
+                                
+                                        <td class="tracklist-duration">
+                                            4:07
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="tracklist-row">
+                                        <td class="tracklist-play"> 
+                                            <a class="tracklist-play-button name-link" 
+                                            href="https://www.youtube.com/watch?v=QpbhSlce_ek" target="_blank">     
+                                            </a>
+                                        </td>
+    
+                                        <td class="tracklist-image">
+                                            <a href="/" class="cover-art name-link">
+                                                <img src="https://lastfm.freetls.fastly.net/i/u/64s/c6f59c1e5e7240a4c0d427abd71f3dbb.jpg" alt="Barry White - Triple Best Of 3 CD">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-loved">   
+                                            <a class="toggle-button tracklist-love-button name-link" href="/">
+                                            </a>
+                                        </td>
+                                
+                                        <td class="tracklist-name">
+                                            <a class="name-link" href="/" title="Never Gonna Give You Up">Never Gonna Give You Up</a>
+                                        </td>
+                        
+                                        <td class="tracklist-artist">
+                                            <a class="name-link" href="/" title="Barry White">Barry White</a>
+                                        </td>
+                                
+                                        <td class="tracklist-duration">
+                                            
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                
+                
+                            <p class="more-link">
+                                <a class="more-link-link" href="/">More tracks</a>
+                            </p>
+                            
+                        </section>
+                    </div>
+                    <div class="col-auxiliary">
+                        <p class="upgrade">
+                            Don't want to see ads? <a class="upgrade-link" href="/">Upgrade Now</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      </main>
+
+
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="footer-top-row">
+              <div class="footer-top-col">
+                <h2 class="footer-heading">Company</h2>
+                <ul class="footer-links list-type-none">
+                  <li class="footer-links-item"><a class="name-link" href="/about">About Last.fm</a></li>
+                  <li class="footer-links-item"><a class="name-link" href="/contact">Contact Us</a></li>
+                  <li class="footer-links-item"><a class="name-link" href="/jobs">Jobs</a></li>
+                </ul>
+              </div>
+              <div class="footer-top-col">
+                <h2 class="footer-heading">Help</h2>
+                <ul class="footer-links list-type-none">
+                  <li class="footer-links-item"><a class="name-link" href="/trackmymusic">Track My Music</a></li>
+                  
+                  <li class="footer-links-item"><a class="name-link" href="https://support.last.fm/" target="_blank">Community Support</a></li>
+                  
+                  <li class="footer-links-item"><a class="name-link" href="/guidelines">Community Guidelines</a></li>
+                  
+                  <li class="footer-links-item"><a class="name-link" href="/faq" target="_blank">Help</a></li>   
+                </ul>
+              </div>
+              <div class="footer-top-col">
+                <h2 class="footer-heading">Goodies</h2>
+                <ul class="footer-links list-type-none">
+                  <li class="footer-links-item"><a class="name-link" href="/">Download Scrobbler</a></li>
+                  <li class="footer-links-item"><a class="name-link" href="/api">Developer API</a></li>
+                  <li class="footer-links-item"><a class="name-link" href="/free-music-downloads">Free Music Downloads</a></li>
+                  <li class="footer-links-item"><a class="name-link" href="https://store.last.fm">Merchandise</a></li>
+                </ul>
+              </div>
+              <div class="footer-top-col">
+                <h2 class="footer-heading">Account</h2>
+                <ul class="footer-links list-type-none">
+                  <li class="footer-links-item"><a class="name-link" href="/join">Sign Up</a></li>
+                  <li class="footer-links-item"><a class="name-link" href="/login">Log In</a></li>
+                  <li class="footer-links-item"><a class="name-link" href="/pro">Subscribe</a></li>
+                </ul>
+              </div>
+              <div class="footer-top-col">
+                <h2 class="footer-heading">Follow Us</h2>
+                <ul class="footer-links list-type-none">
+                  <li class="footer-links-item"><a class="name-link" target="_blank" href="https://www.facebook.com/lastfm">Facebook</a></li>
+                  <li class="footer-links-item"><a class="name-link" target="_blank" href="https://twitter.com/lastfm">Twitter</a></li>
+                  <li class="footer-links-item"><a class="name-link" target="_blank" href="https://www.instagram.com/last_fm">Instagram</a></li>
+                  <li class="footer-links-item"><a class="name-link" target="_blank" href="https://www.youtube.com/user/lastfm">YouTube</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="footer-bottom-col">
+                <ul class="languages">                       
+                  <li class="footer-language footer-language--active">
+                    <strong>English</strong> 
+                  </li>
+              
+                  <li class="footer-language">
+                    <button class="lang-link button-set" name="de" type="submit">Deutsch</button>
+                  </li>
+              
+                  <li class="footer-language">
+                    <button class="lang-link button-set" name="es" type="submit">Español</button>
+                  </li>
+              
+                  <li class="footer-language"> 
+                    <button class="lang-link button-set" name="fr" type="submit">Français</button>
+                  </li>
+              
+                  <li class="footer-language"> 
+                    <button class="lang-link button-set" name="it" type="submit">Italiano</button>
+                  </li>
+              
+                  <li class="footer-language">  
+                    <button class="lang-link button-set" name="ja" type="submit">日本語</button>
+                  </li>
+              
+                  <li class="footer-language">  
+                    <button class="lang-link button-set" name="pl" type="submit">Polski</button> 
+                  </li>
+              
+                  <li class="footer-language">
+                    <button class="lang-link button-set" name="pt" type="submit">Português</button>
+                  </li>
+              
+                  <li class="footer-language">
+                    <button class="lang-link button-set" name="ru" type="submit">Русский</button>
+                  </li>
+              
+                  <li class="footer-language">
+                    <button class="lang-link button-set" name="sv" type="submit">Svenska</button>
+                  </li>
+              
+                  <li class="footer-language">
+                    <button class="lang-link button-set" name="tr" type="submit">Türkçe</button>
+                  </li>
+              
+                  <li class="footer-language">
+                    <button class="lang-link button-set" name="zh" type="submit">简体中文</button>
+                  </li>
+                </ul>
+          
+                <p class="footer-timezone">
+                  Time zone: <strong>Europe/Moscow</strong>
+                </p>
+
+                <div class="footer-privacy">
+                    <ul>
+                      <li class="footer-privacy-item"><a class="name-link" href="http://www.cbsinteractive.com/">CBS Interactive</a> © 2022 Last.fm Ltd. All rights reserved</li>
+                      <li class="footer-privacy-item"><a class="name-link" href="/terms">Terms of Use</a></li>
+                      <li class="footer-privacy-item"><a class="name-link" href="/privacy">Privacy Policy</a></li>
+                      <li class="footer-privacy-item"><a class="name-link" href="/legal">Legal Policies</a></li>
+                      <li class="footer-privacy-item"><a class="name-link" href="/cookies">Cookies Policy</a></li>
+                      <li class="footer-privacy-item"><a class="name-link">Cookie Information</a></li>
+                      <li class="footer-privacy-item"><a class="name-link" target="_blank" href="https://careers.viacomcbs.com/">Jobs at ViacomCBS</a></li>
+                      <li class="footer-privacy-item"><a class="name-link" href="http://www.last.fm">Last.fm Music</a></li>
+                    </ul>  
+                </div>
+              </div>
+              <div class="logo-bottom footer-bottom-col">
+                <p>Audioscrobbler</p>
+                <img class="logo-bottom-marg" src="images/logo_bottom.png" width="37" height="20" alt="Last.fm 'as' logo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
