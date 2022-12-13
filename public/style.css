@@ -283,6 +283,10 @@
     margin-right: -10px;
 }
 
+.tags-list {
+    flex-wrap: wrap;
+}
+
 .column-tracks {
     margin-top: 24px;
     display: grid;
@@ -860,6 +864,10 @@ a.tracklist-love-button::before {
     margin-right: 2px;
 }
 
+.hide {
+    display: none;
+}
+
 @media (min-width: 768px){
 
     .footer-heading {
@@ -880,6 +888,10 @@ a.tracklist-love-button::before {
 
     .music-section, .search-info-section {
         margin-top: 24px;
+    }
+
+    .tags-list {
+        width: 140px;
     }
 
     .col-main {
@@ -936,6 +948,10 @@ a.tracklist-love-button::before {
 
     .site-auth {
         margin-left: 20px;
+    }
+
+    .tags-list {
+        width: 170px;
     }
 
     .col-main {
