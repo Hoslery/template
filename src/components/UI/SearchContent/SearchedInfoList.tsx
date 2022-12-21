@@ -6,6 +6,9 @@ interface InfoListProps<T> {
     renderItem: (item: T) => React.ReactNode
 }
 
+/**
+ * Функциональный компонент, отвечающий за список артистов/альбомов
+ */
 function SearchedInfoList<T>(props: InfoListProps<T>)  {
     return (
         <ol className="grid-items list-type-none">

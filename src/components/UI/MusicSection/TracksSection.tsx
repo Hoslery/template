@@ -7,6 +7,9 @@ interface TracksSectionProps {
     tracksTags: ITag[][]
 }
 
+/**
+ * Функциональный компонент, отвечающий за список популярных треков
+ */
 const TracksSection: FC<TracksSectionProps> = ({tracks, tracksTags}) => {
     return (
         <div className="container page-content">

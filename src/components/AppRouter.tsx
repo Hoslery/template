@@ -3,6 +3,9 @@ import {Route, Routes} from 'react-router-dom';
 
 import {routes } from "../router";
 
+/**
+ * Функциональный элемент, отвечающий за роутинг
+ */
 const AppRouter = () => {
 
     return (

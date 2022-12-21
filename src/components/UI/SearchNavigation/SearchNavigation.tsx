@@ -2,6 +2,10 @@ import React, { FC } from "react";
 import { searchNavTitles } from "../../../utils/constants";
 import NavigationItem from "./NavigationItem";
 
+/**
+ * Функциональный компонент, отвечающий 
+ * за список навигационных элементов на странице поиска
+ */
 const SearchNavigation: FC = () => {
     return (
         <nav className="navlist secondary-nav">

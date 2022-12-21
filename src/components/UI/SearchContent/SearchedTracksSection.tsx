@@ -12,6 +12,9 @@ interface TracksSectionProps {
     durations: number[]
 }
 
+/**
+ * Функциональный компонент, отвечающий за треки на странице поиска
+ */
 const SearchedTracksSection: FC<TracksSectionProps> = ({heading, tracks, durations}) => {
     return (
         <section className="search-info-section">
@@ -29,4 +32,4 @@ const SearchedTracksSection: FC<TracksSectionProps> = ({heading, tracks, duratio
     );
 };
 
-export default SearchedTracksSection;
+export default React.memo(SearchedTracksSection);

@@ -8,6 +8,9 @@ interface ArtistProps {
     artistTags: ITag[]
 }
 
+/**
+ * Функциональный компонент, отвечающий за артиста в списке Популярных артистов
+ */
 const ArtistItem: FC<ArtistProps> = ({id, artist, artistTags}) => {
     return (
         <li className={`music-artists-item ${id > 5 ? 'artist-bottom-row' : ''}`}>

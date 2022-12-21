@@ -6,6 +6,9 @@ import TracksSection from "../components/UI/MusicSection/TracksSection";
 import { useFetching } from "../hooks/useFetching";
 import { IArtist, ITag, ITrack } from "../types/types";
 
+/**
+ * Функциональный компонент, отвечающий за отображение страницы популярных исполнителей/треков
+ */
 const Popular: FC = () => {
     const [artists, setArtists] = useState<IArtist[]>([]);
     const [tagsArtist, setTagsArtist] = useState<ITag[][]>([]);
@@ -37,6 +40,9 @@ const Popular: FC = () => {
     })
     
 
+    /**
+     * Получение данных из API при монтировании компонента и обновление состояний артистов/треков
+     */
     useEffect(() => {
         if (typeof fetchTopArtists === 'function' && 
             typeof fetchTopTracks === 'function'){
@@ -45,12 +51,20 @@ const Popular: FC = () => {
         }
     }, [])
 
+    /**
+     * Получение данных из API при монтировании компонента
+     * (и при изменении состояния артистов) и обновление состояния -  теги Артистов
+     */
     useEffect(() => {
         if (typeof fetchArtistTags === 'function'){
             fetchArtistTags()
         }
     }, [artists])
 
+    /**
+     * Получение данных из API при монтировании компонента
+     * (и при изменении состояния треков) и обновление состояния -  теги Треков
+     */
     useEffect(() => {
         if (typeof fetchTrackTags === 'function'){
             fetchTrackTags()

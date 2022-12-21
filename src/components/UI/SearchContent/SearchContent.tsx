@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect} from "react";
+import React, { FC, useState, useEffect, useRef} from "react";
 import Api from "../../../API/Api";
 import { useFetching } from "../../../hooks/useFetching";
 import { IArtist, IInfo } from "../../../types/types";
@@ -11,22 +11,30 @@ interface SearchContentProps {
     changeValue: (value: string) => void
 }
 
+/**
+ * Функциональный компонент, отвечающий за ключевой контент на странице поиска
+ */
 const SearchContent: FC<SearchContentProps> = ({changeValue}) => {
-    const [searchInfo, setSearchInfo] = useState<string>(localStorage.getItem("value") || '') 
+    const searchInfo = useRef<HTMLInputElement>(null);
 
+    /**
+     * Функция, отвечающая за поиск артистов/альбомов/треков,
+     * при нажатии на иконку поиска или 'Enter' в поле поиска
+     * @param e
+     */
     const search = (e: React.MouseEvent<HTMLButtonElement> | React.KeyboardEvent<HTMLDivElement> ) => {
         if (e.nativeEvent instanceof KeyboardEvent && e.nativeEvent.key !== "Enter") {
             return
         }
-        if(searchInfo === '')
+        if(searchInfo.current!!.value === '')
             return
-        changeValue(searchInfo)
+        changeValue(searchInfo.current!!.value)
         if (typeof fetchSearchedArtists === 'function' && 
             typeof fetchSearchedAlbums === 'function' &&
             typeof fetchSearchedTracks === 'function'){
-            fetchSearchedArtists(searchInfo)
-            fetchSearchedAlbums(searchInfo)
-            fetchSearchedTracks(searchInfo)
+            fetchSearchedArtists(searchInfo.current!!.value)
+            fetchSearchedAlbums(searchInfo.current!!.value)
+            fetchSearchedTracks(searchInfo.current!!.value)
         }
     }
 
@@ -57,16 +65,23 @@ const SearchContent: FC<SearchContentProps> = ({changeValue}) => {
         setDurations(tracksDuration)
     })
 
+    /**
+     * Получение данных из API при монтировании компонента и обновление состояний артистов/альбомов/треков
+     */
     useEffect(() => {
         if (typeof fetchSearchedArtists === 'function' && 
             typeof fetchSearchedAlbums === 'function' &&
             typeof fetchSearchedTracks === 'function'){
-            fetchSearchedArtists(searchInfo)
-            fetchSearchedAlbums(searchInfo)
-            fetchSearchedTracks(searchInfo)
+            fetchSearchedArtists(localStorage.getItem("value") || ' ')
+            fetchSearchedAlbums(localStorage.getItem("value") || ' ')
+            fetchSearchedTracks(localStorage.getItem("value") || ' ')
         }
     }, [])
 
+    /**
+     * Получение данных из API при монтировании компонента
+     * (и при изменении состояния треков) и обновление состояния -  длительность треков
+     */
     useEffect(() => {
         if (typeof fetchTracksDuration === 'function') {
             fetchTracksDuration()
@@ -79,9 +94,9 @@ const SearchContent: FC<SearchContentProps> = ({changeValue}) => {
                 <input 
                     id="searchInfo" className="search-field"
                     type="text" placeholder="Search for music…" 
-                    value={searchInfo} onChange={e => setSearchInfo(e.target.value)}
+                    ref={searchInfo}
                 />
-                <button className="search-reset button-set" type="reset" onClick={() => setSearchInfo('')}></button>
+                <button className="search-reset button-set" type="reset" onClick={() => searchInfo.current!!.value = ''}></button>
                 <button className="search-submit button-set" type="submit" onClick={search}></button>
             </div>
             {artistError || albumError || trackError || trackDurationError 

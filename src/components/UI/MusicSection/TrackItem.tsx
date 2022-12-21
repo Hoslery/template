@@ -7,6 +7,9 @@ interface TrackProps {
     trackTags: ITag[]
 }
 
+/**
+ * Функциональный компонент, отвечающий за трек в списке Популярных треков
+ */
 const TrackItem: FC<TrackProps> = ({track, trackTags}) => {
     return (
         <li className="column-tracks-item">

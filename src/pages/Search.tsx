@@ -3,9 +3,17 @@ import ExtraInf from "../components/UI/ExtraInformation/ExtraInf";
 import SearchContent from "../components/UI/SearchContent/SearchContent";
 import SearchNavigation from "../components/UI/SearchNavigation/SearchNavigation";
 
-const Search: FC = () => {
-    const [searchValue, setSearchValue] = useState<string>(localStorage.getItem("value") || '')
 
+/**
+ * Функциональный компонент, отвечающий за отображение страницы поиска
+ */
+const Search: FC = () => {
+    const [searchValue, setSearchValue] = useState<string>(localStorage.getItem("value") ||' ')
+
+    /**
+     * Функция, для изменения содержания результирующей строки при поиске
+     * @param {String} value 
+     */
     const changeValue = (value: string) => {
         setSearchValue(value)
         localStorage.setItem("value", value);

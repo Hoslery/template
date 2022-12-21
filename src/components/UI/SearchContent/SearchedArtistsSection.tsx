@@ -10,6 +10,9 @@ interface ArtistsSectionProps {
     artists: IArtist[],
 }
 
+/**
+ * Функциональный компонент, отвечающий за артистов на странице поиска
+ */
 const SearchedArtistsSection: FC<ArtistsSectionProps> = ({heading, artists}) => {
     return (
         <section className="search-info-section">
@@ -27,4 +30,4 @@ const SearchedArtistsSection: FC<ArtistsSectionProps> = ({heading, artists}) => 
     );
 };
 
-export default SearchedArtistsSection;
+export default React.memo(SearchedArtistsSection);

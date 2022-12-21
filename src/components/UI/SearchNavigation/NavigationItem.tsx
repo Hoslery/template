@@ -6,6 +6,10 @@ interface NavigationItemProps {
     index: number
 }
 
+/**
+ * Функциональный компонент, отвечающий за элемент
+ * в списке навигации на странице поиска
+ */
 const NavigationItem: FC<NavigationItemProps> = ({navTitle, index}) => {
     const linkClass = `secondary-nav-item-link name-link 
        ${index === 1 ? 'secondary-nav-item-link--active' : ''}`

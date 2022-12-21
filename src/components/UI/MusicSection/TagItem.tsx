@@ -5,6 +5,9 @@ interface TagProps {
     tag: ITag
 }
 
+/**
+ * Функциональный компонент, отвечающий за тег в списке тегов для популярных артистов/треков
+ */
 const TagItem: FC<TagProps> = ({tag}) => {
     return (
         <li className="tag-item">

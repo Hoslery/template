@@ -5,6 +5,9 @@ interface ArtistItemProps {
     artist: IArtist
 }
 
+/**
+ * Функциональный компонент, отвечающий за элемент в списке артистов на странице поиска
+ */
 const SearchedArtistItem: FC<ArtistItemProps> = ({artist}) => {
     return (
         <li className="grid-item">

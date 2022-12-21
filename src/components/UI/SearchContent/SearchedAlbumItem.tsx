@@ -5,6 +5,9 @@ interface AlbumItemProps {
     album: IInfo
 }
 
+/**
+ * Функциональный компонент, отвечающий за элемент в списке альбомов на странице поиска
+ */
 const SearchedAlbumItem: FC<AlbumItemProps> = ({album}) => {
     const artist_url = album.url.substring(0,album.url.lastIndexOf('/'));
 

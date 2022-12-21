@@ -7,6 +7,9 @@ interface TagsProps {
     width?: string
 }
 
+/**
+ * Функциональный компонент, отвечающий за список тегов для популярных артистов/треков
+ */
 const TagsList: FC<TagsProps> = ({tags, width}) => {
     return (
         <section className="close-tags">

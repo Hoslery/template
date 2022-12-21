@@ -1,6 +1,9 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
 
+/**
+ * Функциональный компонент, отвечающий за доп. область на странице поиска
+ */
 const ExtraInf: FC = () => {
 
     return (

@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import Interaction from "./Interaction";
 import PlayerBar from "./PlayerBar";
 
-
+/**
+ * Функциональный компонент, отвечающий за Header
+ */
 const Header: FC = () => {
 
     return (

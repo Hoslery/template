@@ -7,6 +7,9 @@ interface TrackItemProps {
     duration: number,
 }
 
+/**
+ * Функциональный компонент, отвечающий за элемент в таблице треков на странице поиска
+ */
 const SearchedTrackItem: FC<TrackItemProps> = ({track, duration}) => {
     const artist_url = track.url.substring(0,track.url.lastIndexOf('/') - 2);
     let time = "";

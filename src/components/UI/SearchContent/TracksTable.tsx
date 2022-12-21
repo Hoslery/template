@@ -7,6 +7,9 @@ interface TracksTableProps {
     durations: number[]
 }
 
+/**
+ * Функциональный компонент, отвечающий за таблицу треков
+ */
 const TracksTable: FC<TracksTableProps> = ({tracks, durations}) => {
     return (
         <table className="tracklist">

@@ -7,6 +7,9 @@ interface ArtistsSectionProps {
     artistsTags: ITag[][]
 }
 
+/**
+ * Функциональный компонент, отвечающий за список популярных артистов
+ */
 const ArtistsSection: FC<ArtistsSectionProps> = ({artists, artistsTags}) => {
     return (
         <div className="container page-content">

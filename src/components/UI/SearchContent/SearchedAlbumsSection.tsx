@@ -11,6 +11,9 @@ interface AlbumsSectionProps {
     albums: IInfo[],
 }
 
+/**
+ * Функциональный компонент, отвечающий за альбомы на странице поиска
+ */
 const SearchedAlbumsSection: FC<AlbumsSectionProps> = ({heading, albums}) => {
     return (
         <section className="search-info-section">
@@ -28,4 +31,4 @@ const SearchedAlbumsSection: FC<AlbumsSectionProps> = ({heading, albums}) => {
     );
 };
 
-export default SearchedAlbumsSection;
+export default React.memo(SearchedAlbumsSection);
