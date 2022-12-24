@@ -1,23 +1,18 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AppRouter from './components/AppRouter';
+import Footer from './components/UI/Footer/Footer';
+import Header from './components/UI/Header/Header';
+import './styles/App.css'
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+function App() {
+  return (
+    <BrowserRouter>
+        <Header/>
+        <AppRouter/>
+        <Footer/>
+    </BrowserRouter>
+  );
+}
 
-// export default App;
+export default App;
